@@ -6,6 +6,83 @@
     <title>Get Help - MINDFUL VOICES</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <header>
+        <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="services.html">Services</a>
+        </nav>
+
+        <div class="profile-container">
+            <i class="fa-solid fa-user-circle profile-icon" onclick="toggleDropdown()"></i>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="change-profile.html">Change Username</a>
+                <a href="#">Upload Profile Picture</a>
+                <a href="#">Delete Account</a>
+                <a href="logout.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="content-box">
+        <h1>Support Tools</h1>
+
+        <div class="image-container">
+            <div class="image-box" onclick="location.href='feeling-today.html'">
+                <img src="images/feeling-today.jpg" alt="How Are You Feeling Today?">
+                <p>How Are You Feeling Today?</p>
+            </div>
+
+            <div class="image-box" onclick="location.href='https://youtu.be/cPoqxmaEhL4?si=YPQBZ4zsyyeJAD7C'">
+                <img src="images/coping-mechanisms.png" alt="Coping Mechanisms">
+                <p>Coping Mechanisms</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: mindfulvoices@gmail.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdown-menu");
+            dropdown.classList.toggle("show");
+
+            document.addEventListener("click", function(event) {
+                if (!event.target.closest(".profile-container")) {
+                    dropdown.classList.remove("show");
+                }
+            });
+        }
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -171,83 +248,6 @@
             font-size: 14px;
         }
     </style>
-</head>
-
-<body>
-
-
-    <header>
-        <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="services.html">Services</a>
-        </nav>
-
-        <div class="profile-container">
-            <i class="fa-solid fa-user-circle profile-icon" onclick="toggleDropdown()"></i>
-            <div class="dropdown-menu" id="dropdown-menu">
-                <a href="#">Change Username</a>
-                <a href="#">Upload Profile Picture</a>
-                <a href="#">Delete Account</a>
-                <a href="logout.html">Logout</a>
-            </div>
-        </div>
-    </header>
-
-
-    <div class="content-box">
-        <h1>Support Tools</h1>
-
-        <div class="image-container">
-            <div class="image-box" onclick="location.href='feeling-today.html'">
-                <img src="images/feeling-today.jpg" alt="How Are You Feeling Today?">
-                <p>How Are You Feeling Today?</p>
-            </div>
-
-            <div class="image-box" onclick="location.href='coping-mechanisms.html'">
-                <img src="images/coping-mechanisms.png" alt="Coping Mechanisms">
-                <p>Coping Mechanisms</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Location</h4>
-                <p>123 Kiyovu, Kigali</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>Email: mindfulvoices@gmail.com</p>
-                <p>Phone: +250 123456789</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleDropdown() {
-            let dropdown = document.getElementById("dropdown-menu");
-            dropdown.classList.toggle("show");
-
-            // Close dropdown when clicking outside
-            document.addEventListener("click", function(event) {
-                if (!event.target.closest(".profile-container")) {
-                    dropdown.classList.remove("show");
-                }
-            });
-        }
-    </script>
-
 </body>
 
 </html>

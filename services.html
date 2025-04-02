@@ -3,10 +3,126 @@
 
 <head>
     <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+            </nav>
+
+
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="services-title">Our Services</h1>
+
+        <a href="discovery-hub.html" class="service-link">
+            <div class="service">
+                <img src="images/discovery-hub.png" alt="Discovery Hub">
+                <div>
+                    <h2 class="service-title">Discovery Hub</h2>
+                    <p class="service-description">
+                        Read and comment on articles, videos, and interactive content on worldwide mental health topics.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="get-help.html" class="service-link">
+            <div class="service">
+                <img src="images/get-help.jpg" alt="Get Help">
+                <div>
+                    <h2 class="service-title">Get Help</h2>
+                    <p class="service-description">
+                        Evaluate your mental health status and get tailored stress management and coping strategies.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="community-gathering.html" class="service-link">
+            <div class="service">
+                <img src="images/community-gathering.jpg" alt="Community Gathering">
+                <div>
+                    <h2 class="service-title">Community Gathering</h2>
+                    <p class="service-description">
+                        Connect with peers, share stories, and provide mutual support.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="share-your-story.html" class="service-link">
+            <div class="service">
+                <img src="images/share-your-story.jpg" alt="Share Your Story">
+                <div>
+                    <h2 class="service-title">Share Your Story</h2>
+                    <p class="service-description">
+                        Foster hope through real-life stories of recovery and resilience.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="professional-resources.html" class="service-link">
+            <div class="service">
+                <img src="images/professional-resources.jpg" alt="Professional Resources">
+                <div>
+                    <h2 class="service-title">Professional Resources</h2>
+                    <p class="service-description">
+                        Book appointments and receive personalized advice from mental health professionals.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="emergency-tab.html" class="service-link">
+            <div class="service">
+                <img src="images/emergency-tab.jpg" alt="Emergency Tab">
+                <div>
+                    <h2 class="service-title">Emergency Tab</h2>
+                    <p class="service-description">
+                        Quick access to crisis hotlines and resources.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: mindfulvoices@gmail.com.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <title>MINDFUL VOICES - Services</title>
     <style>
-        /* Reset */
-        
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +140,6 @@
             text-decoration: none;
             color: #000;
         }
-        /* Header */
         
         header {
             display: flex;
@@ -50,7 +165,6 @@
             font-weight: bold;
             color: #fff;
         }
-        /* Profile Section */
         
         .profile-container {
             position: relative;
@@ -93,18 +207,15 @@
         .profile-dropdown a:hover {
             background: rgba(85, 107, 47, 0.1);
         }
-        /* Show dropdown when active */
         
         .profile-container.active .profile-dropdown {
             display: block;
         }
-        /* Main Content */
         
         main {
             padding: 40px 20px;
             background: #fff;
         }
-        /* Our Services Title */
         
         .services-title {
             text-align: center;
@@ -113,7 +224,6 @@
             color: #556B2F;
             margin-bottom: 40px;
         }
-        /* Service Sections */
         
         .service {
             display: flex;
@@ -153,7 +263,6 @@
             color: inherit;
             display: block;
         }
-        /* Footer */
         
         footer {
             background: #556B2F;
@@ -183,97 +292,6 @@
             font-size: 14px;
         }
     </style>
-    <script>
-        // Toggle profile dropdown menu
-        function toggleProfileMenu() {
-            document.querySelector(".profile-container").classList.toggle("active");
-        }
-
-        // Close the dropdown when clicking outside
-        window.onclick = function(event) {
-            if (!event.target.matches(".profile-icon")) {
-                let dropdowns = document.querySelectorAll(".profile-container");
-                dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <!-- Header -->
-    <header>
-        <div class="header-left">
-            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
-        </div>
-
-        <div class="header-right">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="services.html">Services</a>
-            </nav>
-
-            <!-- Profile Section -->
-            <div class="profile-container">
-                <i class="fa-solid fa-user-circle profile-icon" onclick="toggleProfileMenu()"></i>
-                <div class="profile-dropdown">
-                    <a href="#">Change Username</a>
-                    <a href="#">Add Profile Picture</a>
-                    <a href="#">Delete Account</a>
-                    <a href="logout.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <h1 class="services-title">Our Services</h1>
-        <a href="discovery-hub.html" class="service-link">
-            <div class="service">
-                <img src="discovery-hub.jpg" alt="Discovery Hub">
-                <div>
-                    <h2 class="service-title">Discovery Hub</h2>
-                    <p class="service-description">
-                        Read and comment on articles, videos, and interactive content on worldwide mental health topics.
-                    </p>
-                </div>
-            </div>
-        </a>
-
-        <div class="service">
-            <a href="get-help.html" class="service-link">
-                <div>
-                    <h2 class="service-title">Get Help</h2>
-                    <p class="service-description">
-                        Evaluate your mental health status and get tailored stress management and coping strategies.
-                    </p>
-                </div>
-                <img src="images/get-help.jpg" alt="Get Help">
-            </a>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Location</h4>
-                <p>123 Kiyovu, Kigali</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>Email: mindfulvoices@gmail.com</p>
-                <p>Phone: +250 123456789</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025. All Rights Reserved.</p>
-        </div>
-    </footer>
-
 </body>
 
 </html>

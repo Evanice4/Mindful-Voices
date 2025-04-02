@@ -6,6 +6,90 @@
     <title>Share Your Story - MINDFUL VOICES</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="services.html">Services</a>
+        </nav>
+
+        <div class="profile-container">
+            <i class="fa-solid fa-user-circle profile-icon" onclick="toggleDropdown()"></i>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#">Change Username</a>
+                <a href="#">Upload Profile Picture</a>
+                <a href="#">Delete Account</a>
+                <a href="logout.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <h1>Share Your Story</h1>
+
+        <div class="story-form">
+            <textarea id="storyInput" placeholder="Write your story..."></textarea>
+            <button class="save-btn" onclick="saveStory()">Save</button>
+        </div>
+
+        <div id="storiesContainer"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdown-menu");
+            dropdown.classList.toggle("show");
+
+            document.addEventListener("click", function(event) {
+                if (!event.target.closest(".profile-container")) {
+                    dropdown.classList.remove("show");
+                }
+            });
+        }
+
+        function saveStory() {
+            let storyText = document.getElementById("storyInput").value;
+            if (storyText.trim() === "") return;
+
+            let storyBox = document.createElement("div");
+            storyBox.className = "story-box";
+            storyBox.innerHTML = `
+                <p>${storyText}</p>
+                <button class="delete-btn" onclick="deleteStory(this)">Delete</button>
+                <div class="like-comment">
+                    <button onclick="likeStory(this)"><i class="fa-solid fa-thumbs-up"></i></button>
+                    <button onclick="commentStory()"><i class="fa-solid fa-comment"></i></button>
+                </div>
+            `;
+
+            document.getElementById("storiesContainer").prepend(storyBox);
+            document.getElementById("storyInput").value = "";
+        }
+
+        function deleteStory(button) {
+            let storyBox = button.parentElement;
+            storyBox.remove();
+        }
+
+        function likeStory(button) {
+            button.style.color = "#556B2F";
+        }
+
+        function commentStory() {
+            alert("Comment functionality coming soon!");
+        }
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -182,89 +266,6 @@
             margin-top: auto;
         }
     </style>
-</head>
-
-<body>
-
-    <header>
-        <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="services.html">Services</a>
-        </nav>
-
-        <div class="profile-container">
-            <i class="fa-solid fa-user-circle profile-icon" onclick="toggleDropdown()"></i>
-            <div class="dropdown-menu" id="dropdown-menu">
-                <a href="#">Change Username</a>
-                <a href="#">Upload Profile Picture</a>
-                <a href="#">Delete Account</a>
-                <a href="logout.html">Logout</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="content-container">
-        <h1>Share Your Story</h1>
-
-        <div class="story-form">
-            <textarea id="storyInput" placeholder="Write your story..."></textarea>
-            <button class="save-btn" onclick="saveStory()">Save</button>
-        </div>
-
-        <div id="storiesContainer"></div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function toggleDropdown() {
-            let dropdown = document.getElementById("dropdown-menu");
-            dropdown.classList.toggle("show");
-
-            document.addEventListener("click", function(event) {
-                if (!event.target.closest(".profile-container")) {
-                    dropdown.classList.remove("show");
-                }
-            });
-        }
-
-        function saveStory() {
-            let storyText = document.getElementById("storyInput").value;
-            if (storyText.trim() === "") return;
-
-            let storyBox = document.createElement("div");
-            storyBox.className = "story-box";
-            storyBox.innerHTML = `
-                <p>${storyText}</p>
-                <button class="delete-btn" onclick="deleteStory(this)">Delete</button>
-                <div class="like-comment">
-                    <button onclick="likeStory(this)"><i class="fa-solid fa-thumbs-up"></i></button>
-                    <button onclick="commentStory()"><i class="fa-solid fa-comment"></i></button>
-                </div>
-            `;
-
-            document.getElementById("storiesContainer").prepend(storyBox);
-            document.getElementById("storyInput").value = "";
-        }
-
-        function deleteStory(button) {
-            let storyBox = button.parentElement;
-            storyBox.remove();
-        }
-
-        function likeStory(button) {
-            button.style.color = "#556B2F";
-        }
-
-        function commentStory() {
-            alert("Comment functionality coming soon!");
-        }
-    </script>
 
 </body>
 

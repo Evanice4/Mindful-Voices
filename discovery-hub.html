@@ -6,6 +6,137 @@
     <title>Discovery Hub - MINDFUL VOICES</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+            </nav>
+            <div class="profile-container">
+                <i class="fa-solid fa-user-circle profile-icon"></i>
+                <div class="dropdown-menu">
+                    <a href="#">Change Username</a>
+                    <a href="#">Upload Profile Picture</a>
+                    <a href="#">Delete Account</a>
+                    <a href="logout.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="section-box">
+            <h1 class="section-title">Understanding Mental Health</h1>
+
+            <h2 class="sub-title">Articles</h2>
+            <ul class="content-list">
+                <li> <img src="images/mental-health.jpg" width="100px" height="100px">
+                    <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response" target="_blank">What is Mental Health?
+
+                        </a>
+                </li>
+                <li> <img src="images/anxiety.jpg" width="100px" height="100px">
+                    <a href="https://www.nami.org/About-Mental-Illness/Common-with-Mental-Illness" target="_blank">Common Mental Health Conditions</a></li>
+            </ul>
+
+            <h2 class="sub-title">Videos</h2>
+            <div class="video-container">
+                <a href="https://youtu.be/IvnT7HwOZic?si=rNK2tFRk8ho3v9YG" target="_blank">
+                    <img src="images/mental-health.jpg">
+                </a>
+
+
+                <span>Mental Health Basics Explained (Animated)</span>
+            </div>
+            <div class="video-container">
+                <a href="https://youtu.be/XEqBix7oYsM?si=pyxqavRFQ7ExsZDr" target="_blank">
+                    <img src="images/symptoms.jpg">
+                </a>
+                <span>Recognizing Mental Health Symptoms</span>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h1 class="section-title">Coping Strategies and Tools</h1>
+
+            <h2 class="sub-title">Articles</h2>
+            <ul class="content-list">
+                <li>
+                    <a href="https://www.mindful.org/how-to-manage-stress-with-mindfulness-and-meditation/" target="_blank">
+                        <img src="images/coping.jpg" width="100px" height="100px" alt="Mindfulness"> Mindfulness and Meditation Techniques
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.innerpeacefellowship.org/how-to-meditate/?gad_source=1&gclid=Cj0KCQjwna6_BhCbARIsALId2Z1xGGdccVsZo7KpstRHMPSwnlDtXKDCJU5Ye6xNemkYFDQDsP5gIj4aAkW1EALw_wcB" target="_blank">
+                        <img src="images/stress_management.jpg" width="100px" height="100px" alt="Stress Management">
+                        <span> Effective Stress Management tools</span>
+                    </a>
+                </li>
+            </ul>
+
+            <h2 class="sub-title">Videos</h2>
+            <div class="video-container">
+                <a href="https://youtu.be/VUjiXcfKBn8?si=QuMgdaoYRbejjR12" target="_blank">
+                    <img src="images/breathing.jpg">
+                </a>
+                <span>Guided Breathing Exercises</span>
+            </div>
+            <div class="video-container">
+                <a href="https://youtu.be/WI-j39vOqmk?si=sy2g89gB1srTNCBu" target="_blank">
+                    <img src="images/journaling.jpg">
+                </a>
+                <span>Introduction to Journaling</span>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: mindfulvoices@gmail.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profileContainer = document.querySelector(".profile-container");
+            profileContainer.addEventListener("click", function(event) {
+                this.classList.toggle("active");
+                event.stopPropagation();
+            });
+
+            document.addEventListener("click", function(event) {
+                if (!profileContainer.contains(event.target)) {
+                    profileContainer.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -180,138 +311,6 @@
             font-size: 14px;
         }
     </style>
-</head>
-
-<body>
-
-    <header>
-        <div class="header-left">
-            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
-        </div>
-
-        <div class="header-right">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="services.html">Services</a>
-            </nav>
-            <div class="profile-container">
-                <i class="fa-solid fa-user-circle profile-icon"></i>
-                <div class="dropdown-menu">
-                    <a href="#">Change Username</a>
-                    <a href="#">Upload Profile Picture</a>
-                    <a href="#">Delete Account</a>
-                    <a href="logout.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-
-        <div class="section-box">
-            <h1 class="section-title">Understanding Mental Health</h1>
-
-            <h2 class="sub-title">Articles</h2>
-            <ul class="content-list">
-                <li> <img src="images/mental-health.jpg" width="100px" height="100px">
-                    <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response" target="_blank">What is Mental Health?
-
-                        </a>
-                </li>
-                <li> <img src="images/anxiety.jpg" width="100px" height="100px">
-                    <a href="https://www.nami.org/About-Mental-Illness/Common-with-Mental-Illness" target="_blank">Common Mental Health Conditions</a></li>
-            </ul>
-
-            <h2 class="sub-title">Videos</h2>
-            <div class="video-container">
-                <a href="https://youtu.be/IvnT7HwOZic?si=rNK2tFRk8ho3v9YG" target="_blank">
-                    <img src="images/mental-health.jpg">
-                </a>
-
-
-                <span>Mental Health Basics Explained (Animated)</span>
-            </div>
-            <div class="video-container">
-                <a href="https://youtu.be/XEqBix7oYsM?si=pyxqavRFQ7ExsZDr" target="_blank">
-                    <img src="images/symptoms.jpg">
-                </a>
-                <span>Recognizing Mental Health Symptoms</span>
-            </div>
-        </div>
-
-        <!-- Coping Strategies and Tools Section -->
-        <div class="section-box">
-            <h1 class="section-title">Coping Strategies and Tools</h1>
-
-            <h2 class="sub-title">Articles</h2>
-            <ul class="content-list">
-                <li>
-                    <a href="https://www.mindful.org/how-to-manage-stress-with-mindfulness-and-meditation/" target="_blank">
-                        <img src="images/coping.jpg" width="100px" height="100px" alt="Mindfulness"> Mindfulness and Meditation Techniques
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.innerpeacefellowship.org/how-to-meditate/?gad_source=1&gclid=Cj0KCQjwna6_BhCbARIsALId2Z1xGGdccVsZo7KpstRHMPSwnlDtXKDCJU5Ye6xNemkYFDQDsP5gIj4aAkW1EALw_wcB" target="_blank">
-                        <img src="stress_management.jpg" width="100px" height="100px" alt="Stress Management">
-                        <span> Effective Stress Management tools</span>
-                    </a>
-                </li>
-            </ul>
-
-            <h2 class="sub-title">Videos</h2>
-            <div class="video-container">
-                <a href="https://youtu.be/VUjiXcfKBn8?si=QuMgdaoYRbejjR12" target="_blank">
-                    <img src="images/breathing.jpg">
-                </a>
-                <span>Guided Breathing Exercises</span>
-            </div>
-            <div class="video-container">
-                <a href="https://youtu.be/WI-j39vOqmk?si=sy2g89gB1srTNCBu" target="_blank">
-                    <img src="images/journaling.jpg">
-                </a>
-                <span>Introduction to Journaling</span>
-            </div>
-        </div>
-
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Location</h4>
-                <p>123 Kiyovu, Kigali</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>Email: mindfulvoices@gmail.com</p>
-                <p>Phone: +250 123456789</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const profileContainer = document.querySelector(".profile-container");
-            profileContainer.addEventListener("click", function(event) {
-                this.classList.toggle("active");
-                event.stopPropagation();
-            });
-
-            document.addEventListener("click", function(event) {
-                if (!profileContainer.contains(event.target)) {
-                    profileContainer.classList.remove("active");
-                }
-            });
-        });
-    </script>
-
 </body>
 
 </html>

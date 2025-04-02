@@ -4,6 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Logout - MINDFUL VOICES</title>
+    <script>
+        // Auto redirect after 5 seconds
+        setTimeout(function() {
+            window.location.href = "login2.html";
+        }, 9000);
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+                <a href="login2.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="logout-container">
+        <div class="logout-box">
+            <h2>You Have Logged Out</h2>
+            <p>Thank you for using Mindful Voices. You are now logged out.</p>
+            <p>Redirecting to login page...</p>
+            <button onclick="window.location.href='login2.html'">LOG IN AGAIN</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: mindfulvoices@gmail.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <style>
         * {
             margin: 0;
@@ -113,62 +169,6 @@
             font-size: 14px;
         }
     </style>
-
-    <script>
-        // Auto redirect after 5 seconds
-        setTimeout(function() {
-            window.location.href = "login2.html";
-        }, 9000);
-    </script>
-</head>
-
-<body>
-
-    <header>
-        <div class="header-left">
-            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
-        </div>
-
-        <div class="header-right">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="services.html">Services</a>
-                <a href="login2.html">Login</a>
-            </nav>
-        </div>
-    </header>
-
-
-    <div class="logout-container">
-        <div class="logout-box">
-            <h2>You Have Logged Out</h2>
-            <p>Thank you for using Mindful Voices. You are now logged out.</p>
-            <p>Redirecting to login page...</p>
-            <button onclick="window.location.href='login2.html'">LOG IN AGAIN</button>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Location</h4>
-                <p>123 Kiyovu, Kigali</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>Email: mindfulvoices@gmail.com</p>
-                <p>Phone: +250 123456789</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025. All Rights Reserved.</p>
-        </div>
-    </footer>
 
 </body>
 

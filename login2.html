@@ -4,6 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <title>MINDFUL VOICES - Login</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+                <a href="login2.html">Login</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Log In to Your Account</h2>
+            <p>Welcome back to Mindful Voices</p>
+            <form onsubmit="loginUser(event)">
+
+
+                <input type="email" id="email" placeholder="Email" required>
+                <div class="password-fields">
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <span class="eye-icon" onclick="togglePassword('password')">&#128065;</span>
+                    </div>
+                </div>
+
+                <!-- JavaScript handles login -->
+                <button onclick="redirectToServices()">LOG IN</button>
+
+                <div class="separator">OR</div>
+
+                <p class="login-link">Don't have an account? <a href="register.html">Create an Account</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: info@mindfulvoices.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function togglePassword(fieldId) {
+            var field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+            } else {
+                field.type = "password";
+            }
+        }
+
+        function redirectToServices() {
+            window.location.href = "dashboard.html";
+        }
+    </script>
+    <script>
+        function loginUser(event) {
+            event.preventDefault(); // Prevents form from submitting
+            const email = document.querySelector('input[name="email"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+
+            // Check if user exists in localStorage
+            const storedUser = JSON.parse(localStorage.getItem(email));
+            if (storedUser && storedUser.password === password) {
+                localStorage.setItem("loggedInUser", email);
+                alert("Login successful!");
+                window.location.href = "dashboard.html"; // Redirect to services page
+            } else {
+                alert("Invalid email or password.");
+            }
+        }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -173,103 +270,6 @@
             font-size: 14px;
         }
     </style>
-</head>
-
-<body>
-
-    <header>
-        <div class="header-left">
-            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
-        </div>
-
-        <div class="header-right">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="services.html">Services</a>
-                <a href="login2.html">Login</a>
-                <a href="register.html">Register</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="auth-container">
-        <div class="auth-box">
-            <h2>Log In to Your Account</h2>
-            <p>Welcome back to Mindful Voices</p>
-            <form onsubmit="loginUser(event)">
-
-
-                <input type="email" id="email" placeholder="Email" required>
-                <div class="password-fields">
-                    <div class="password-container">
-                        <input type="password" id="password" placeholder="Password" required>
-                        <span class="eye-icon" onclick="togglePassword('password')">&#128065;</span>
-                    </div>
-                </div>
-
-                <!-- JavaScript handles login -->
-                <button onclick="redirectToServices()">LOG IN</button>
-
-                <div class="separator">OR</div>
-
-                <p class="login-link">Don't have an account? <a href="register.html">Create an Account</a></p>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Location</h4>
-                <p>123 Kiyovu, Kigali</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>Email: info@mindfulvoices.com</p>
-                <p>Phone: +250 123456789</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function togglePassword(fieldId) {
-            var field = document.getElementById(fieldId);
-            if (field.type === "password") {
-                field.type = "text";
-            } else {
-                field.type = "password";
-            }
-        }
-
-        function redirectToServices() {
-            window.location.href = "dashboard.html";
-        }
-    </script>
-    <script>
-        function loginUser(event) {
-            event.preventDefault(); // Prevents form from submitting
-            const email = document.querySelector('input[name="email"]').value;
-            const password = document.querySelector('input[name="password"]').value;
-
-            // Check if user exists in localStorage
-            const storedUser = JSON.parse(localStorage.getItem(email));
-            if (storedUser && storedUser.password === password) {
-                localStorage.setItem("loggedInUser", email);
-                alert("Login successful!");
-                window.location.href = "dashboard.html"; // Redirect to services page
-            } else {
-                alert("Invalid email or password.");
-            }
-        }
-    </script>
-
 </body>
 
 </html>

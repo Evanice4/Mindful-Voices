@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Book an Appointment - MINDFUL VOICES</title>
+    <title>MINDFUL VOICES - Community Gathering</title>
 </head>
 
 <body>
-
     <header>
         <div class="header-left">
             <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
@@ -23,34 +22,32 @@
         </div>
     </header>
 
-    <div class="booking-container">
-        <div class="booking-box">
-            <h2>Book an Appointment</h2>
-            <p>Select a specialist and schedule your appointment.</p>
+    <main>
+        <section class="intro-section">
+            <h1>Connect with Me!</h1>
+            <p>Welcome to the Community Gathering! This space is dedicated to connecting with others, sharing stories, and supporting each other through the journey of mental health and wellness. The moment you join a group you started a journey towards
+                building a supportive and inclusive mentalhealth ecosystem, say no to stigma and yes to connection! Correct your peers where they use bad mental health words that support critism and discriminiation. Let's embark on this journey together!</p>
+        </section>
 
-            <form action="send_appointment.php" method="POST">
-                <label for="doctor">Choose a Specialist:</label>
-                <select name="doctor" id="doctor" required>
-                    <option value="Dr. Alian SAYINZOGA">Dr. Alian SAYINZOGA - Neurology Specialist (Ndera Neuropsychiatric Teaching Hospital)</option>
-                    <option value="Dr. Chantal MUREKATETE">Dr. Chantal MUREKATETE - Psychiatrist (King Faisal Hospital Rwanda)</option>
-                </select>
+        <section class="breakout-section">
+            <h2>Breakout Groups</h2>
 
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" name="date" required>
-
-                <label for="time">Preferred Time:</label>
-                <input type="time" id="time" name="time" required>
-
-                <button type="submit">SUBMIT APPOINTMENT</button>
-            </form>
-        </div>
-    </div>
+            <div class="breakout-group">
+                <img src="images/youth-connect.jpg" alt="Youth Connect">
+                <h3>Youth Connect</h3>
+                <ul>Community to shape your identity</ul>
+            </div>
+            <div class="breakout-group">
+                <img src="images/mother-connect.jpg" alt="Mother Connect">
+                <h3>Mother Connect</h3>
+                <ul>Understanding from a mother's perspective</ul>
+            </div>
+            <div class="breakout-group">
+                <img src="images/adult-connect.jpg" alt="Adult Connect">
+                <h3>Adult Connect</h3>
+                <ul>Find Support and Understanding</ul>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -72,9 +69,8 @@
             <p>&copy; 2025. All Rights Reserved.</p>
         </div>
     </footer>
+
     <style>
-        /* Base Reset */
-        
         * {
             margin: 0;
             padding: 0;
@@ -86,20 +82,28 @@
             background: #fff;
             color: #000;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         a {
             text-decoration: none;
             color: #000;
         }
-        /* Header */
         
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: #556B2F;
+            border-bottom: 2px solid #556B2F;
             padding: 10px 20px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
         }
         
         .header-left img.logo {
@@ -112,61 +116,67 @@
             font-weight: bold;
             color: #fff;
         }
-        /* Booking Container */
         
-        .booking-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
+        main {
+            padding: 40px 20px;
+            flex: 1;
+        }
+        
+        .intro-section {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .intro-section h1 {
+            font-size: 35px;
+            font-weight: bold;
+            color: #556B2F;
             text-align: center;
         }
         
-        .booking-box {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px #556B2F;
-            width: 600px;
-            border-radius: 10px;
+        .intro-section p {
+            font-size: 16px;
+            color: #000;
         }
         
-        .booking-box h2 {
+        .breakout-section {
+            background: rgba(85, 107, 47, 0.1);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .breakout-section h2 {
+            font-size: 28px;
             color: #556B2F;
             margin-bottom: 20px;
         }
         
-        .booking-box p {
-            font-size: 16px;
-            color: #444;
-            margin-bottom: 15px;
+        .breakout-group {
+            display: inline-block;
+            width: 30%;
+            margin: 0 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
         
-        .booking-box select,
-        .booking-box input {
+        .breakout-group img {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-size: 14px;
-            margin-bottom: 10px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
         }
         
-        .booking-box button {
-            background: #556B2F;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            width: 100%;
-            font-size: 16px;
-            cursor: pointer;
+        .breakout-group:hover {
+            transform: scale(1.05);
+        }
+        
+        .breakout-group h3 {
+            font-size: 18px;
+            color: #556B2F;
             margin-top: 10px;
-            border-radius: 3px;
         }
-        
-        .booking-box button:hover {
-            background: #445A26;
-        }
-        /* Footer */
         
         footer {
             background: #556B2F;
@@ -194,6 +204,10 @@
         
         .footer-bottom p {
             font-size: 14px;
+        }
+        
+        footer {
+            margin-top: auto;
         }
     </style>
 </body>
