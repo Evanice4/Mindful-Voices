@@ -36,14 +36,14 @@ MindfulVoices/
 ├── css/             # CSS files for styling
 ├── js/              # JavaScript files (e.g., form validation, interactive elements)
 ├── index.html       # Homepage
-├── login.html       # Login page
+├── login2.html       # Login page
 ├── register.html    # Registration page
 ├── services.html    # Overview of all services offered
 ├── discovery-hub.html  # Articles and videos on mental health
 ├── get-help.html    # Self-help resources and professional support
-├── community.html   # Community gathering page with breakout groups
-├── book-appointment.html  # Appointment booking page
-├── emergency.html   # Emergency contacts and resources
+├── community-gathering.html   # Community gathering page with breakout groups
+├── professional-resources.html  # Appointment booking page
+├── emergency-tab.html   # Emergency contacts and resources
 └── README.md        # Project documentation  
 ```
 
