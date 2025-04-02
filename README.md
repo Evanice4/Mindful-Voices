@@ -1,2 +1,0 @@
-# Mindful-Voices
-Project

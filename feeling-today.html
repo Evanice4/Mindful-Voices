@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Are You Feeling Today?</title>
+    <link rel="stylesheet" href="feeling-today.css">
+    <script defer src="feeling-today.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="services.html">Services</a>
+        </nav>
+
+        <div class="profile-container">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+            <i class="fa-solid fa-user-circle profile-icon" onclick="toggleDropdown()"></i>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#">Change Username</a>
+                <a href="#">Upload Profile Picture</a>
+                <a href="#">Delete Account</a>
+                <a href="logout.html">Logout</a>
+            </div>
+        </div>
+    </header>
+    </header>
+
+
+    <div class="background">
+        <div class="content-box">
+            <h2 class="title">Daily Reflection</h2>
+
+            <div class="question-container">
+
+                <div class="question active">
+                    <h3>How would you describe your mood right now?</h3>
+                    <div class="emoji-container">
+                        <div class="emoji" onclick="selectEmoji(this, 'happy')">😀 <span>Happy</span></div>
+                        <div class="emoji" onclick="selectEmoji(this, 'neutral')">😐 <span>Neutral</span></div>
+                        <div class="emoji" onclick="selectEmoji(this, 'sad')">😔 <span>Sad</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="check-in hidden"></div>
+
+
+            <div class="button-container">
+                <a href="get-help.html" class="nav-button">⬅</a>
+                <button id="nextBtn" onclick="nextQuestion()">Next</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="community-gathering.html"> Community Gathering </a>
+        <a href="professional-resources.html">| Book an Appointment </a>
+        <p>&copy; 2025. All rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

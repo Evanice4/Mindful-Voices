@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MINDFUL VOICES - Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #556B2F;
+            border-bottom: 2px solid #556B2F;
+            padding: 10px 20px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-left img.logo {
+            width: 70px;
+            height: auto;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background: #fff;
+        }
+        
+        .auth-box {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px #556B2F;
+            width: 450px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .auth-box h2 {
+            color: #556B2F;
+            margin-bottom: 10px;
+        }
+        
+        .auth-box p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .auth-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .password-fields {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+        
+        .password-container input {
+            width: 100%;
+            padding: 10px;
+            padding-right: 35px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #556B2F;
+            font-size: 18px;
+        }
+        
+        .auth-box button {
+            background: #556B2F;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+        
+        .auth-box button:hover {
+            background: #445A26;
+        }
+        
+        .separator {
+            margin: 15px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: #556B2F;
+        }
+        
+        .login-link {
+            font-size: 14px;
+        }
+        
+        .login-link a {
+            color: #556B2F;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #556B2F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+                <a href="login2.html">Login</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Log In to Your Account</h2>
+            <p>Welcome back to Mindful Voices</p>
+            <form onsubmit="loginUser(event)">
+
+
+                <input type="email" id="email" placeholder="Email" required>
+                <div class="password-fields">
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <span class="eye-icon" onclick="togglePassword('password')">&#128065;</span>
+                    </div>
+                </div>
+
+                <!-- JavaScript handles login -->
+                <button onclick="redirectToServices()">LOG IN</button>
+
+                <div class="separator">OR</div>
+
+                <p class="login-link">Don't have an account? <a href="register.html">Create an Account</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: info@mindfulvoices.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function togglePassword(fieldId) {
+            var field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+            } else {
+                field.type = "password";
+            }
+        }
+
+        function redirectToServices() {
+            window.location.href = "dashboard.html";
+        }
+    </script>
+    <script>
+        function loginUser(event) {
+            event.preventDefault(); // Prevents form from submitting
+            const email = document.querySelector('input[name="email"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+
+            // Check if user exists in localStorage
+            const storedUser = JSON.parse(localStorage.getItem(email));
+            if (storedUser && storedUser.password === password) {
+                localStorage.setItem("loggedInUser", email);
+                alert("Login successful!");
+                window.location.href = "dashboard.html"; // Redirect to services page
+            } else {
+                alert("Invalid email or password.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

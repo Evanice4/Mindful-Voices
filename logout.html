@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Logout - MINDFUL VOICES</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #556B2F;
+            padding: 10px 20px;
+        }
+        
+        .header-left img.logo {
+            width: 70px;
+            height: auto;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .logout-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
+        }
+        
+        .logout-box {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px #556B2F;
+            width: 400px;
+            border-radius: 10px;
+        }
+        
+        .logout-box h2 {
+            color: #556B2F;
+            margin-bottom: 20px;
+        }
+        
+        .logout-box p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        
+        .logout-box button {
+            background: #556B2F;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+        
+        .logout-box button:hover {
+            background: #445A26;
+        }
+        
+        footer {
+            background: #556B2F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        // Auto redirect after 5 seconds
+        setTimeout(function() {
+            window.location.href = "login2.html";
+        }, 9000);
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+                <a href="login2.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="logout-container">
+        <div class="logout-box">
+            <h2>You Have Logged Out</h2>
+            <p>Thank you for using Mindful Voices. You are now logged out.</p>
+            <p>Redirecting to login page...</p>
+            <button onclick="window.location.href='login2.html'">LOG IN AGAIN</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: mindfulvoices@gmail.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

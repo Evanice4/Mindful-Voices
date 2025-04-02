@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book an Appointment - MINDFUL VOICES</title>
+    <style>
+        /* Base Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        /* Header */
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #556B2F;
+            padding: 10px 20px;
+        }
+        
+        .header-left img.logo {
+            width: 70px;
+            height: auto;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+        /* Booking Container */
+        
+        .booking-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
+        }
+        
+        .booking-box {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px #556B2F;
+            width: 600px;
+            border-radius: 10px;
+        }
+        
+        .booking-box h2 {
+            color: #556B2F;
+            margin-bottom: 20px;
+        }
+        
+        .booking-box p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        
+        .booking-box select,
+        .booking-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .booking-box button {
+            background: #556B2F;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+        
+        .booking-box button:hover {
+            background: #445A26;
+        }
+        /* Footer */
+        
+        footer {
+            background: #556B2F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+                <a href="logout.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="booking-container">
+        <div class="booking-box">
+            <h2>Book an Appointment</h2>
+            <p>Select a specialist and schedule your appointment.</p>
+
+            <form action="send_appointment.php" method="POST">
+                <label for="doctor">Choose a Specialist:</label>
+                <select name="doctor" id="doctor" required>
+                    <option value="Dr. Alian SAYINZOGA">Dr. Alian SAYINZOGA - Neurology Specialist (Ndera Neuropsychiatric Teaching Hospital)</option>
+                    <option value="Dr. Chantal MUREKATETE">Dr. Chantal MUREKATETE - Psychiatrist (King Faisal Hospital Rwanda)</option>
+                </select>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">SUBMIT APPOINTMENT</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: mindfulvoices@gmail.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

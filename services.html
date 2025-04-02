@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MINDFUL VOICES - Services</title>
+    <style>
+        /* Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        /* Header */
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #556B2F;
+            border-bottom: 2px solid #556B2F;
+            padding: 10px 20px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-left img.logo {
+            width: 70px;
+            height: auto;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+        /* Profile Section */
+        
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #fff;
+        }
+        
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            background: #fff;
+            box-shadow: 0px 4px 6px rgba(85, 107, 47, 0.5);
+            border-radius: 5px;
+            width: 180px;
+            z-index: 10;
+        }
+        
+        .profile-dropdown a {
+            display: block;
+            padding: 10px;
+            color: #000;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(85, 107, 47, 0.3);
+        }
+        
+        .profile-dropdown a:last-child {
+            border-bottom: none;
+        }
+        
+        .profile-dropdown a:hover {
+            background: rgba(85, 107, 47, 0.1);
+        }
+        /* Show dropdown when active */
+        
+        .profile-container.active .profile-dropdown {
+            display: block;
+        }
+        /* Main Content */
+        
+        main {
+            padding: 40px 20px;
+            background: #fff;
+        }
+        /* Our Services Title */
+        
+        .services-title {
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            color: #556B2F;
+            margin-bottom: 40px;
+        }
+        /* Service Sections */
+        
+        .service {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .service:hover {
+            background: rgba(85, 107, 47, 0.1);
+        }
+        
+        .service img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 20px;
+            border-radius: 10px;
+        }
+        
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #556B2F;
+            margin-bottom: 10px;
+        }
+        
+        .service-description {
+            font-size: 16px;
+            color: #000;
+        }
+        
+        .service-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        /* Footer */
+        
+        footer {
+            background: #556B2F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        // Toggle profile dropdown menu
+        function toggleProfileMenu() {
+            document.querySelector(".profile-container").classList.toggle("active");
+        }
+
+        // Close the dropdown when clicking outside
+        window.onclick = function(event) {
+            if (!event.target.matches(".profile-icon")) {
+                let dropdowns = document.querySelectorAll(".profile-container");
+                dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Mindful Voices Logo" class="logo">
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Services</a>
+            </nav>
+
+            <!-- Profile Section -->
+            <div class="profile-container">
+                <i class="fa-solid fa-user-circle profile-icon" onclick="toggleProfileMenu()"></i>
+                <div class="profile-dropdown">
+                    <a href="#">Change Username</a>
+                    <a href="#">Add Profile Picture</a>
+                    <a href="#">Delete Account</a>
+                    <a href="logout.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="services-title">Our Services</h1>
+        <a href="discovery-hub.html" class="service-link">
+            <div class="service">
+                <img src="discovery-hub.jpg" alt="Discovery Hub">
+                <div>
+                    <h2 class="service-title">Discovery Hub</h2>
+                    <p class="service-description">
+                        Read and comment on articles, videos, and interactive content on worldwide mental health topics.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <div class="service">
+            <a href="get-help.html" class="service-link">
+                <div>
+                    <h2 class="service-title">Get Help</h2>
+                    <p class="service-description">
+                        Evaluate your mental health status and get tailored stress management and coping strategies.
+                    </p>
+                </div>
+                <img src="images/get-help.jpg" alt="Get Help">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Location</h4>
+                <p>123 Kiyovu, Kigali</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: mindfulvoices@gmail.com</p>
+                <p>Phone: +250 123456789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
